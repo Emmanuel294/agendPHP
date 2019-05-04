@@ -7,24 +7,7 @@
 <div class="bg-amarillo contenedor sombra">
     <form id="contacto" action="#">
         <legend>Añada un contacto <span> Todos los campos son obligatorios</span> </legend>
-
-        <div class="campos">
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" placeholder="Nombre contacto" id="nombre">
-            </div>
-            <div class="campo">
-                <label for="empresa">Empresa:</label>
-                <input type="text" placeholder="Nombre Empresa" id="empresa">
-            </div>
-            <div class="campo">
-                <label for="telefono">Telefono:</label>
-                <input type="tel" placeholder="Número de telefono"" id="telefono">
-            </div>
-        </div>
-        <div class="campo enviar">
-                <input type="submit" value="Añadir">
-            </div>
+        <?php include 'inc/layout/formulario.php';?>
     </form>
 </div>
 <div class="bg-blanco contenedor sombra contactos">
@@ -50,7 +33,7 @@
                         <td>SMG</td>
                         <td>3211064551</td>
                         <td> 
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="far fa-edit"></i>
                             </a>
 
@@ -64,7 +47,7 @@
                         <td>SMG</td>
                         <td>3211064551</td>
                         <td> 
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="far fa-edit"></i>
                             </a>
 
@@ -78,7 +61,7 @@
                         <td>SMG</td>
                         <td>3211064551</td>
                         <td> 
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="far fa-edit"></i>
                             </a>
 
