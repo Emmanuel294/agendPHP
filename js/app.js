@@ -27,7 +27,7 @@ function leerFormulario(e){
         infoContacto.append('telefono',telefono);
         infoContacto.append('accion',accion);
 
-        console.log(...infoContacto);
+        
 
         if(accion ==='crear'){
             //Crearemos el nuevo elemento
@@ -42,12 +42,20 @@ function insertarBD(datos){
     //Llamado a AJAX
 
     //Crear el objeto
-    const xhr = XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
 
     //Abrir la conexion
-    xhr.open('POST',);
+    xhr.open('POST','inc/modelos/modelo-contactos.php',true);
 
     //Pasar los datos
+    xhr.onload = function(){
+        if(this.status == 200){
+            console.log(JSON.parse(xhr.responseText) );
+            //Leemos la respuesta de PHP
+            const respuesta = JSON.parse(xhr.responseText) ;
+            console.log(respuesta.empresa);
+        }
+    }
 
     //Enviar los datos
     xhr.send(datos);
